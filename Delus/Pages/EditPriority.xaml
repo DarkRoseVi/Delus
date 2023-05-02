@@ -1,0 +1,54 @@
+﻿<Page x:Class="Delus.Pages.EditPriority"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Delus.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      DataContext="{Binding RelativeSource={RelativeSource Self}}"
+      Title="EditPriority">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="399*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                 >
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Максимальный приоритет"/>
+                <!--<TextBlock Text="{Binding ClipToBounds}"/>-->
+                <TextBlock Text="Приоритет"></TextBlock>
+                <TextBox x:Name="ProrTB"></TextBox>
+                <Button Content="Сохранить"
+                        x:Name="SaveBtn"
+                      Click="SaveBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <ListView Grid.Row="0"
+                  Grid.Column="1"
+                  ItemsSource="{Binding ingrediebt}"
+                  x:Name="ProductLw"
+                  d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5" Text="{Binding Title}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="1"
+            Grid.Column="1" Content="Доабвить" x:Name="AddBtn"
+            Click ="AddBtn_Click" />
+
+    </Grid>
+</Page>

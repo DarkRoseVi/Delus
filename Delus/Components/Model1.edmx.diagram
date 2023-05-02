@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7bdf023dd0ea4e378a981c0aedb659d2" Name="Diagram1">
+        <EntityTypeShape EntityType="AgentDelusModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgentDelusModel.Agent" Width="1.5" PointX="3" PointY="4.25" />
+        <EntityTypeShape EntityType="AgentDelusModel.AgentPriorityHistory" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="AgentDelusModel.AgentType" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="AgentDelusModel.Material" Width="1.5" PointX="3" PointY="14.5" />
+        <EntityTypeShape EntityType="AgentDelusModel.MaterialCountHistory" Width="1.5" PointX="5.25" PointY="19.875" />
+        <EntityTypeShape EntityType="AgentDelusModel.MaterialType" Width="1.5" PointX="0.75" PointY="15.5" />
+        <EntityTypeShape EntityType="AgentDelusModel.Product" Width="1.5" PointX="3" PointY="9.625" />
+        <EntityTypeShape EntityType="AgentDelusModel.ProductCostHistory" Width="1.5" PointX="5.25" PointY="16.25" />
+        <EntityTypeShape EntityType="AgentDelusModel.ProductMaterial" Width="1.5" PointX="5.25" PointY="10.375" />
+        <EntityTypeShape EntityType="AgentDelusModel.ProductSale" Width="1.5" PointX="5.25" PointY="7.25" />
+        <EntityTypeShape EntityType="AgentDelusModel.ProductType" Width="1.5" PointX="0.75" PointY="10.5" />
+        <EntityTypeShape EntityType="AgentDelusModel.Shop" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="AgentDelusModel.Supplier" Width="1.5" PointX="5.25" PointY="22.5" />
+        <AssociationConnector Association="AgentDelusModel.FK_Agent_AgentType" />
+        <AssociationConnector Association="AgentDelusModel.FK_AgentPriorityHistory_Agent" />
+        <AssociationConnector Association="AgentDelusModel.FK_ProductSale_Agent" />
+        <AssociationConnector Association="AgentDelusModel.FK_Shop_Agent" />
+        <AssociationConnector Association="AgentDelusModel.FK_Material_MaterialType" />
+        <AssociationConnector Association="AgentDelusModel.FK_MaterialCountHistory_Material" />
+        <AssociationConnector Association="AgentDelusModel.FK_ProductMaterial_Material" />
+        <AssociationConnector Association="AgentDelusModel.FK_Product_ProductType" />
+        <AssociationConnector Association="AgentDelusModel.FK_ProductCostHistory_Product" />
+        <AssociationConnector Association="AgentDelusModel.FK_ProductMaterial_Product" />
+        <AssociationConnector Association="AgentDelusModel.FK_ProductSale_Product" />
+        <AssociationConnector Association="AgentDelusModel.MaterialSupplier" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
