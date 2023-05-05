@@ -145,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\EditAgentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EditPriority.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +160,9 @@
     </Compile>
     <Compile Include="Pages\AgentPage.xaml.cs">
       <DependentUpon>AgentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditAgentPage.xaml.cs">
+      <DependentUpon>EditAgentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EditPriority.xaml.cs">
       <DependentUpon>EditPriority.xaml</DependentUpon>

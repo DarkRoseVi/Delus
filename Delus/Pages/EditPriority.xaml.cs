@@ -64,9 +64,14 @@ namespace Delus.Pages
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            asdas.ChangeDate = DateTime.Now;
             
             asdas.PriorityValue = int.Parse(ProrTB.Text);
+            DBConnect.db.AgentPriorityHistory.Add(asdas);
+        //    DBConnect.db.AgentPriorityHistory.Add(new AgentPriorityHistory {
+        //        ChangeDate = DateTime.Now,
+        //        PriorityValue = asdas.PriorityValue,
+        //        AgentID = asdas.AgentID,
+        //});
             DBConnect.db.SaveChanges();
 
 

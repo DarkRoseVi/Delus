@@ -31,11 +31,12 @@
                       Click="SaveBtn_Click"/>
             </StackPanel>
         </StackPanel>
-        <ListView Grid.Row="0"
-                  Grid.Column="1"
+        <ListView 
                   ItemsSource="{Binding ingrediebt}"
                   x:Name="ProductLw"
-                  d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2">
+                  d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  Grid.Row="0" Grid.Column="2"
+                  >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

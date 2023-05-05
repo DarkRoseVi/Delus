@@ -29,7 +29,7 @@ namespace Delus.Pages
             gkhgchjf = agentshistoru;
             List<int> ingredientIds = _agent.Select(s => s.ID).ToList();
 
-            agents = DBConnect.db.Agent.ToList();
+            agents = DBConnect.db.Agent.Where(x=> ingredientIds.Contains(x.ID)==false).ToList();
             InitializeComponent();
 
         }
@@ -38,10 +38,12 @@ namespace Delus.Pages
         {
             DBConnect.db.AgentPriorityHistory.Add(new AgentPriorityHistory
             {
-                Agent = IngridientList.SelectedItem as Agent,
-                ID = gkhgchjf.ID,
-                ChangeDate = DateTime.Now,
-            });
+               
+              AgentID = (IngridientList.SelectedItem as Agent).ID,
+              
+               ChangeDate = DateTime.Now,
+
+        });
             DBConnect.db.SaveChanges();
         EditPriority.UpdateIngridientList(gkhgchjf);
 
